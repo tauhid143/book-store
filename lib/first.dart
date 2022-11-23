@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class First extends StatelessWidget {
   const First({Key? key}) : super(key: key);
@@ -8,39 +6,83 @@ class First extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          "BOOKS WORLD",
+          style: TextStyle(color: Colors.black),
+        ),
+        backgroundColor: Colors.white,
+      ),
       body: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Column(children: [
-          Container(
-            height: 600,
-            width: 800,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 100, 200, 8.0),
-                  child: Container(
-                    height: 480,
+          Padding(
+            padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+            child: SizedBox(
+              height: 600,
+              width: 1100,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Container(
+                    height: 500,
                     width: 300,
                     decoration: const BoxDecoration(
                       image: DecorationImage(
                           image: AssetImage(
-                        "assets/images/img1.jpg",
+                        "assets/images/img4.jpg",
+                      )),
+                      borderRadius: BorderRadius.all(Radius.circular(80.0)),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey,
+                          blurRadius: 40.0,
+                          spreadRadius: 5.0,
+                          offset: Offset(-15, 0),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    height: 500,
+                    width: 300,
+                    decoration: const BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage(
+                        "assets/images/img3.jpg",
+                      )),
+                      borderRadius: BorderRadius.all(Radius.circular(80.0)),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey,
+                          blurRadius: 40.0,
+                          spreadRadius: 5.0,
+                          offset: Offset(-15, 0),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    height: 500,
+                    width: 300,
+                    decoration: const BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage(
+                        "assets/images/img.jpg",
                       )),
                       borderRadius: BorderRadius.all(Radius.circular(100)),
                       boxShadow: [
                         BoxShadow(
                           color: Colors.grey,
-                          blurRadius: 30.0,
+                          blurRadius: 40.0,
                           spreadRadius: 5.0,
-                          offset: Offset(0.0, 0),
+                          offset: Offset(-15, 0),
                         ),
                       ],
                     ),
-                    child: Row(),
-                  ),
-                )
-              ],
+                  )
+                ],
+              ),
             ),
           ),
         ]),

@@ -1,4 +1,6 @@
-import 'package:book_store/home.dart';
+import 'package:book_store/first.dart';
+// ignore: unused_import
+import 'package:book_store/lib.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,7 +15,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       title: "Book Shop",
       debugShowCheckedModeBanner: false,
-      home: Home(),
+      home: First(),
     );
   }
 }

@@ -1,7 +1,5 @@
 import 'package:book_store/first.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -27,8 +25,9 @@ class Home extends StatelessWidget {
         height: 1000,
         decoration: const BoxDecoration(
             image: DecorationImage(
-                image: AssetImage("assets/images/main.jpg"),
-                fit: BoxFit.cover)),
+          image: AssetImage("assets/images/main.jpg"),
+          fit: BoxFit.cover,
+        )),
       ),
     );
   }
